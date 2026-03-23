@@ -19,8 +19,14 @@ cypher with rotation 13. If you are not easily offended, find and decode some of
 https: // thinkpython. com/ code/ rotate. py .
 '''
 
+'''
+Notes: % 26 is because the rotation only makes sense with values from 0 - 26 (length of the English alphabet). This allows for large values like the 33 found in the last test case to work properly.
+The conditionals like value >/< ord(ZzAa) is there to keep the values within the bounds of a-z or A-Z.
+
+'''
+
 def rotate_word(word, rotation_value):
-    rotation_value = rotation_value % 26 # Since this really only makes sense by rotating by 1-26 (where 26 is the same as 0 and provides the same value), this makes sure outlandish values like 300 still work.
+    rotation_value = rotation_value % 26
     rotated_word = ''
     for letter in word:
         value = ord(letter) + rotation_value
