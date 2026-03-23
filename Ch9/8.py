@@ -15,20 +15,28 @@ Write a Python program that tests all the six-digit numbers and prints any numbe
 these requirements. Solution: https: // thinkpython. com/ code/ cartalk2. py .
 '''
 
-# This code is incredibly inefficient.
-i = 100000
+def is_palindrome(word):
+    # Reusing a previously created function.
+    if word == word[::-1]:
+        return True
+    else:
+        return False
+    
+def test_odometer():
+    i = 100000
+    while i < 1000000:
+        if i % 100000:
+            print(f"On mile number {i}")
+        if is_palindrome(str(i)[2:]):
+            if is_palindrome(str(i + 1)[1:]):
+                if is_palindrome(str(i + 2)[1:5]):
+                    if is_palindrome((str(i + 3))):
+                        print(i)
+    i += 1
 
-while i < 1000000:
-    odometer = i
-    str_odometer = str(i)
-    if str_odometer[-4::] == str_odometer[4::-1]:
-        odometer += 1
-        str_odometer = str(odometer)
-        if str(odometer[-5::]) == str(odometer[5::-1]):
-            odometer +=1
-            str_odometer = str(odometer)
-            if str_odometer[1:5] == str_odometer[4:0:-1]:
-                odometer +=1
-                str_odometer = str(odometer)
-                if str_odometer == str_odometer[::-1]:
-                    print(i)
+test_odometer()
+
+'''
+Answers:
+
+'''

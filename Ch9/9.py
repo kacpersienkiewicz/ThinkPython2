@@ -14,3 +14,29 @@ method zfill useful.
 Solution: https: // thinkpython. com/ code/ cartalk3. py .
 '''
 
+def is_reversed(parent: str, child: str):
+    if parent == child[::-1]:
+        return True
+    else:
+        return False
+    
+def str_fill(age: int, n: int):
+    # Makes sure the lengths of the parent and child's age are the same using zfill
+    return str(age).zfill(n)
+
+def check_palindrome_ages(parent: int, child: int):
+    # parent = parent's age, child = child's age, both currently
+    difference = parent - child
+
+    child_age = 0
+
+    while True:
+        parent_age = child_age + difference
+        if parent_age > 100: # basically, it is impossible for three digits to create a palindrome, unless I guess they had the child near 100.
+            break
+        if is_reversed(str_fill(parent_age, 2), str_fill(child_age, 2)):
+            print(f"Palindrome at age {parent_age} for the parent, and at age {child_age} for the child.")
+        child_age += 1
+
+        
+check_palindrome_ages(73, 37)
