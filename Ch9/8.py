@@ -25,7 +25,7 @@ def is_palindrome(word):
 def test_odometer():
     i = 100000
     while i < 1000000:
-        if i % 100000:
+        if i % 10000:
             print(f"On mile number {i}")
         if is_palindrome(str(i)[2:]):
             if is_palindrome(str(i + 1)[1:]):
@@ -38,5 +38,5 @@ test_odometer()
 
 '''
 Answers:
-
+198888
 '''
