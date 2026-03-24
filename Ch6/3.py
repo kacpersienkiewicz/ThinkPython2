@@ -20,14 +20,17 @@ Solution: https: // thinkpython. com/ code/ palindrome_ soln. py .
 '''
 
 def first(word):
-    return word[0]
+    return str(word)[0]
+
 def last(word):
-    return word[-1]
+    return str(word)[-1]
+
 def middle(word):
-    return word[1:-1]
+    return str(word)[1:-1]
+
 def is_palindrome(word):
     # This is a kinda recursive strategy, with a sort of base case for 1 or 0 word length.
-    if len(word) <= 1:
+    if len(str(word)) <= 1:
         return True
     elif first(word) == last(word):
         return is_palindrome(middle(word))
@@ -35,3 +38,8 @@ def is_palindrome(word):
         return False
 
 print(is_palindrome(123))
+print(is_palindrome(1221))
+print(is_palindrome('abba'))
+print(is_palindrome('abab'))
+print(is_palindrome('grarg'))
+print(is_palindrome('super'))

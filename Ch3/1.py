@@ -14,6 +14,18 @@ def right_justify(word: str):
     right_justified_text = ' ' * (column_space - offset) + word
     print(right_justified_text)
 
+def center_justify(word):
+    offset = len(word)
+    if offset % 2 == 0:
+        center_justified_text = ' ' * ((column_space - offset) // 2) + word + ' ' * ((column_space - offset) // 2)
+    else:
+        offset -= 1
+        center_justified_text = ' ' * ((column_space - offset) // 2) + word + ' ' * ((column_space - offset) // 2)
+    print(center_justified_text)
+
 column_space = 70
 
 right_justify('monty')
+right_justify('Supercalifragilisticexpialidocious')
+center_justify('monty')
+center_justify('Supercalifragilisticexpialidocious')

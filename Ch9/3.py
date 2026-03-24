@@ -17,7 +17,9 @@ def avoids(word, forbidden_letters):
 forbidden_letters = input("Enter your forbidden letters of choice.\n")
 
 fin = open('Ch9\words.txt')
+
 word_count = 0
+
 for line in fin:
     if avoids(line, forbidden_letters):
         word_count += 1

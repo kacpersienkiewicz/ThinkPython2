@@ -20,6 +20,7 @@ def has_no_e(word):
     return True
 
 fin = open('Ch9\words.txt')
+
 for line in fin:
     if has_no_e(line):
         print(line)

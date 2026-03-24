@@ -59,9 +59,10 @@ def dictionary_creation(fin):
     return pronounciation_dict
 
 pronounciation_dict = dictionary_creation(cmu_dict)
+
 for word in pronounciation_dict:
     word2 = word[1:]
     word3 = word[0] + word[2:]
     if word2 in pronounciation_dict and word3 in pronounciation_dict:
         if pronounciation_dict[word] == pronounciation_dict[word2] == pronounciation_dict[word3]:
-            print(f"{word}, {word2}, and {word3} are homophones")
+            print(f"{word}, {word2}, and {word3} are homophones.")

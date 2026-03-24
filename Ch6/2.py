@@ -18,4 +18,7 @@ def ack(m,n):
         print("Both m and n must be integers greater to or equal to 0.")
 
 print(ack(3, 4))
+print(ack(0,1))
+print(ack(-1,1))
+print(ack(2,0))
 # print(ack(250,300)) this reaches recursion depth

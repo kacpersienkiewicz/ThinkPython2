@@ -13,7 +13,7 @@ k=0
 (k!)43964k
 Write a function called estimate_pi that uses this formula to compute and return an estimate of
 π. It should use a while loop to compute terms of the summation until the last term is smaller than
-1e-15 (which is Python notation for 10−15). You can check the result by comparing it to math.pi.
+1e-15 (which is Python notation for 10-15). You can check the result by comparing it to math.pi.
 Solution: https: // thinkpython. com/ code/ pi. py .
 '''
 
@@ -35,4 +35,5 @@ def estimate_pi():
         pi_estimate += term
         k+=1
     return 1 / (coeff * pi_estimate)
+
 print(math.pi - estimate_pi())

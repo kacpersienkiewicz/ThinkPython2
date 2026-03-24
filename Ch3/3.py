@@ -75,4 +75,7 @@ def m_by_n_grid(rows: int, columns: int):
     
     print(outer_line)
 
+simple_2_by_2_grid()
+concatenation_2_by_2_grid()
+simple_4_by_4_grid()
 m_by_n_grid(6, 5)

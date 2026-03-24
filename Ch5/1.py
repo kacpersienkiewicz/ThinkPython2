@@ -9,7 +9,9 @@ Write a script that reads the current time and converts it to a time of day in h
 seconds, plus the number of days since the epoch.
 '''
 import time
+
 curr_time = time.time() #time in seconds since epoch
+
 seconds_in_day = 60 * 60 * 24
 seconds_in_hour = 60 * 60
 seconds_in_minute = 60 

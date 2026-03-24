@@ -10,9 +10,15 @@ Use this idiom to write a one-line version of is_palindrome from Exercise 6.3.
 '''
 
 def is_palindrome(word):
-    if word == word[::-1]:
+    if str(word) == str(word)[::-1]:
         return True
     else:
         return False
 
 print(is_palindrome('popo'))
+print(is_palindrome(123))
+print(is_palindrome(1221))
+print(is_palindrome('abba'))
+print(is_palindrome('abab'))
+print(is_palindrome('grarg'))
+print(is_palindrome('super'))

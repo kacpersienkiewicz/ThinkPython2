@@ -4,6 +4,7 @@ characters (not counting whitespace).
 '''
 
 fin = open('Ch9\\words.txt')
+
 for line in fin:
     if len(line) > 20:
         print(line)

@@ -19,13 +19,15 @@ cypher with rotation 13. If you are not easily offended, find and decode some of
 https: // thinkpython. com/ code/ rotate. py .
 '''
 
-'''
-Notes: % 26 is because the rotation only makes sense with values from 0 - 26 (length of the English alphabet). This allows for large values like the 33 found in the last test case to work properly.
-The conditionals like value >/< ord(ZzAa) is there to keep the values within the bounds of a-z or A-Z.
 
-'''
 
 def rotate_word(word, rotation_value):
+    '''
+    Notes: % 26 is because the rotation only makes sense with values from 0 - 26 (length of the English alphabet). This allows for large values like the 33 found in the last test case to work properly.
+    The conditionals like value >/< ord(ZzAa) is there to keep the values within the bounds of a-z or A-Z.
+
+    There may be some additional optimizations, but it seems good as is.
+    '''
     rotation_value = rotation_value % 26
     rotated_word = ''
     for letter in word:
@@ -48,3 +50,30 @@ print(rotate_word('cheer', 7))
 print(rotate_word('melon', -10))
 print(rotate_word('IBM', -1))
 print(rotate_word('cheer', 33))
+
+#ROT13 Ciphers, from Wikipedia and elsewhere
+print(rotate_word('aha nun', 13))
+print(rotate_word('balk onyx', 13))
+print(rotate_word('barf ones', 13))
+print(rotate_word('bin ova', 13))
+print(rotate_word('envy rail', 13))
+print(rotate_word('errs reef', 13))
+print(rotate_word('fur she', 13))
+print(rotate_word('gnat tang', 13))
+print(rotate_word('clerk pyrex', 13))
+print(rotate_word('PNG cat', 13))
+print(rotate_word('furby sheof', 13))
+print(rotate_word('what Jung', 13))
+print(rotate_word('ant nag', 13))
+print(rotate_word('bar one', 13))
+print(rotate_word('be or', 13))
+print(rotate_word('ebbs roof', 13))
+print(rotate_word('er re', 13))
+print(rotate_word('flap sync', 13))
+print(rotate_word('gel try', 13))
+print(rotate_word('irk vex', 13))
+print(rotate_word('purely cheryl', 13))
+print(rotate_word('SHA fun', 13))
+print(rotate_word('terra green', 13))
+print(rotate_word('URL hey', 13))
+print(rotate_word('Ares Nerf', 13))

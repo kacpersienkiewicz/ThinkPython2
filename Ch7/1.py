@@ -36,9 +36,13 @@ of the difference between the two estimates.
 import math
 import sys
 
-eps = sys.float_info.epsilon
+# I figure using the built-in function from sys is better than doing espilon = 0.000000000001
+eps = sys.float_info.epsilon  
 
 def mysqrt(a):
+    '''
+    Based on the function from Chapter 7.5, using the built-in epsilon from sys rather than setting epsilon to an arbitrarily small value.
+    '''
     if a == 1:
         x = 1
     else:
