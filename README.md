@@ -10,5 +10,4 @@ In Exercise 8.5, I made the function better at handling edge cases (big rotation
 
 ##  TODO
 
-* Excercise 12.3 seems to not be working properly, as it has some issues with word2 listing multiple words.
 * Excercise 12.4 is incomplete.
