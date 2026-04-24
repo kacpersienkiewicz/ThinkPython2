@@ -6,8 +6,6 @@ swaps. Solution: https://thinkpython.com/code/metathesis.py . Credit: This exerc
 is inspired by an example at http://puzzlers.org .
 '''
 
-# TODO: There are some anomalies of multiple words showing up for word 2: ['absorb'] ['adsorb', 'boards', 'broads', 'dobras']
-
 fin = open('Ch9\\words.txt')
 
 def anagram_sets(fin):
@@ -35,17 +33,18 @@ def check_metathesis_pair(word1, word2):
         return False
 
 def print_meta_metathesis_pairs(anagram_dict):
-    for word1 in anagram_dict.values():
-        word1 = str(word1)
-        for word2 in anagram_dict.values():
-            word2 = str(word2)
-            if word1 > word2: # prevents duplicate entries
-                continue
-            else:
-                if check_metathesis_pair(word1,word2):
-                    print(word1 + ' ' + word2)
-                else:
+    for word in anagram_dict.values():
+        for i in range(len(word)):
+            str_word1 = str(word[i])
+            for j in range(len(word)):
+                str_word2 = str(word[j])
+                if i < j: # prevents duplicate entries
                     continue
+                else:
+                    if check_metathesis_pair(str_word1,str_word2):
+                        print(str_word1 + ' ' + str_word2)
+                    else:
+                        continue
     return
 
 anagrams = anagram_sets(fin)
