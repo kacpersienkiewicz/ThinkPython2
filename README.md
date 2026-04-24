@@ -7,3 +7,8 @@ I have added some of my own additions to these excercises such as Exercise 3.3 (
 In Exercise 5.3, I also added a bit to check if the triangle was degenerate. This was based on an offhand comment in the problem statement but I thought it was interesting so I included it for fun.
 
 In Exercise 8.5, I made the function better at handling edge cases (big rotation values).
+
+##  TODO
+
+* Excercise 12.3 seems to not be working properly, as it has some issues with word2 listing multiple words.
+* Excercise 12.4 is incomplete.
