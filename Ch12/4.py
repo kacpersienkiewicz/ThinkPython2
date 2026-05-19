@@ -62,3 +62,4 @@ memo['a'] = 'a'
 memo['i'] = 'i'
 
 for word in words:
+    

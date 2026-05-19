@@ -12,6 +12,7 @@ An alternative is:
 4. Use the index to find the corresponding word in the word list.
 '''
 import string
+import random
 
 #From Ex 10.10
 def in_bisect(sorted_list, target_word):
@@ -38,7 +39,6 @@ def parse_book(txt):
         if line.startswith(end_line) and start_of_text == True:
             start_of_text = False
 
-
         if start_of_text:
             curr_line = line.lower().strip()
             for char in string.punctuation:
@@ -59,3 +59,12 @@ def cumsum(numbers: list):
         cumsum_object.append(sum(numbers[:i]))
         i += 1
     return cumsum_object
+
+txt = open('Ch13\\pg1.txt', 'r', encoding="utf-8")
+freq_dict = parse_book(txt)
+freqs = cumsum(list(freq_dict.values()))
+words = list(freq_dict.keys())
+
+i = random.randint(0, freqs[-1])
+index = in_bisect(freqs, i)
+print(words[index])
